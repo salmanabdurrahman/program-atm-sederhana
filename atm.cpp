@@ -11,7 +11,13 @@ void tf() {
     string nama, jenis, ket;
     int norek, transfer;
     cout << endl;
-    cout << "===================TRANSFER UANG====================" << endl;
+    cout << "==================================================================" << endl;
+    cout << endl;
+    cout << "                          -- PT BANK AMIKOM --                    " << endl;
+    cout << endl;
+    cout << "==================================================================" << endl;
+    cout << endl;
+    cout << "=--------------------------- TRANSFER UANG -----------------------" << endl;
     cout << endl;
     cout << "Masukkan Nama Pemilik Rekening        : "; cin >> nama;
     cout << "Masukkan Jenis ATM Bank               : "; cin >> jenis;
@@ -21,15 +27,15 @@ void tf() {
     cout << endl;
     jumlah -= transfer;
 
-    cout << "-------------------------------------------------------------------" << endl;
-    cout << "===================Preview Pembayaran Anda================" << endl;
+    cout << "------------------------------------------------------------------" << endl;
+    cout << "======================= Preview Pembayaran Anda ==================" << endl;
     cout << endl;
     cout << "Nama                              : " << nama << endl;
     cout << "Jenis ATM Bank                    : " << jenis << endl;
     cout << "No. Rekening Tujuan               : " << norek << endl;
     cout << "Jumlah Transfer                   : Rp. " << transfer << endl;
     cout << "Keterangan                        : " << ket << endl;
-    cout << "-------------------------------------------------------------------" << endl;
+    cout << "------------------------------------------------------------------" << endl;
     cout << "Terimakasih! Transaksi anda sedang diproses...." << endl;
     cout << "Sisa saldo anda : Rp. " << jumlah << endl;
     cout << endl;
@@ -41,8 +47,13 @@ void tf() {
 // Fungsi menabung
 void nabung() {
     int uang;
+    cout << "==================================================================" << endl;
     cout << endl;
-    cout << "========== SETOR TUNAI ===========" << endl;
+    cout << "                          -- PT BANK AMIKOM --                    " << endl;
+    cout << endl;
+    cout << "==================================================================" << endl;
+    cout << endl;
+    cout << "----------------------------- SETOR TUNAI ------------------------" << endl;
     cout << endl;
     cout << "Nominal Yang Diterima : " << endl;
     cout << "Kelipatan Rp50.000" << endl;
@@ -54,7 +65,7 @@ void nabung() {
 
     cout << endl;
     cout << "Uang Pada ATM Anda Saat Ini RP. " << jumlah << endl;
-    cout << "===================================" << endl;
+    cout << "==================================================================" << endl;
     cout << endl;
 
     int cod;
@@ -65,19 +76,24 @@ void nabung() {
 // Prosedur tampil informasi kelompok
 void tampil() {
     cout << endl;
-    cout << "================= INFORMASI KELOMPOK ================" << endl;
+    cout << "==================================================================" << endl;
     cout << endl;
-    cout << "|====|=================|=====================|==============|===================|==================|" << endl;
-    cout << "| No |   PIN           |     Nama            |    NIM       |   Prodi           |     Saldo        |" << endl;
-    cout << "|====|=================|=====================|==============|===================|==================|" << endl;
-    cout << "| 1  | 23122956        | Rama Danadipa       | 23122956     | Sistem Informasi  |" << jumlah << "\t\t|" << endl;
-    cout << "|====|=================|=====================|==============|===================|==================|" << endl;
-    cout << "| 2  | 23122961        | Salman Abdurrahman  | 23122961     | Sistem Informasi  |" << jumlah << "\t\t|" << endl;
-    cout << "|====|=================|=====================|==============|===================|==================|" << endl;
-    cout << "| 3  | 23122952        | Wisnu Fadhillah     | 23122952     | Sistem Informasi  |" << jumlah << "\t\t|" << endl;
-    cout << "===================================================================================================|" << endl;
-    cout << "| 4  | 23122940        | Rizki Maulana       | 23122940     | Sistem Informasi  |" << jumlah << "\t\t|" << endl;
-    cout << "===================================================================================================|" << endl;
+    cout << "                           -- PT BANK AMIKOM --                   " << endl;
+    cout << endl;
+    cout << "==================================================================" << endl;
+    cout << "--------------------------- INFORMASI KELOMPOK -------------------" << endl;
+    cout << endl;
+    cout << "|====|=================|=====================|==============|===================|===============|" << endl;
+    cout << "| No |   PIN           |     Nama            |    NIM       |   Prodi           |     Saldo     |" << endl;
+    cout << "|====|=================|=====================|==============|===================|===============|" << endl;
+    cout << "| 1  | 123456          | Rama Danadipa       | 23.12.2956   | Sistem Informasi  |  " << jumlah << "   \t|" << endl;
+    cout << "|====|=================|=====================|==============|===================|===============|" << endl;
+    cout << "| 2  | 123456          | Salman Abdurrahman  | 23.12.2961   | Sistem Informasi  |  " << jumlah << "   \t|" << endl;
+    cout << "|====|=================|=====================|==============|===================|===============|" << endl;
+    cout << "| 3  | 123456          | Wisnu Fadhillah     | 23.12.2952   | Sistem Informasi  |  " << jumlah << "   \t|" << endl;
+    cout << "|====|=================|=====================|==============|===================|===============|" << endl;
+    cout << "| 4  | 123456          | Rizki Maulana       | 23.12.2940   | Sistem Informasi  |  " << jumlah << "   \t|" << endl;
+    cout << "================================================================================================|" << endl;
     cout << endl;
     int cod;
     cout << "Masukan kode Angka Bebas Untuk Kembali Ke Home = "; cin >> cod;
@@ -87,10 +103,16 @@ void tampil() {
 // Prosedur untuk menampilkan saldo
 void saldo() {
     cout << endl;
-    cout << "================= SALDO ANDA =================" << endl;
-    cout << "------------ TOTAL SALDO : Rp " << jumlah << " --------------" << endl;
+    cout << "==================================================================" << endl;
     cout << endl;
-    cout << "== TERIMA KASIH TELAH MENGGUNAKAN ATM INI ==" << endl;
+    cout << "                         -- PT BANK AMIKOM --                     " << endl;
+    cout << endl;
+    cout << "==================================================================" << endl;
+    cout << endl;
+    cout << "---------------------------- SALDO ANDA --------------------------" << endl;
+    cout << " TOTAL SALDO : Rp " << jumlah << endl;
+    cout << endl;
+    cout << "============== TERIMA KASIH TELAH MENGGUNAKAN ATM INI ============" << endl;
     cout << endl;
     int cod;
     cout << "Masukkan Kode Angka Bebas untuk kembali ke Home : "; cin >> cod;
@@ -100,28 +122,28 @@ void saldo() {
 
 // Prosedur untuk keluar
 void exit_program() {
-    cout << "==========================================================" << endl;
-    cout << "Terima Kasih Telah Menggunakan Mesin ATM Sederhana Kami..." << endl;
-    cout << "==========================================================" << endl;
+    cout << "==================================================================" << endl;
+    cout << "    Terima Kasih Telah Menggunakan Mesin ATM Sederhana Kami...    " << endl;
+    cout << "==================================================================" << endl;
 }
 
 // Prosedur untuk menampilkan judul
 void judul() {
     cout << "==================================================================" << endl;
     cout << endl;
-    cout << "FINAL PROJECT PEMROGRAMAN TERSTRUKTUR" << endl;
+    cout << "              FINAL PROJECT PEMROGRAMAN TERSTRUKTUR               " << endl;
     cout << endl;
-    cout << "MESIN ATM SEDERHANA" << endl;
+    cout << "                       MESIN ATM SEDERHANA                        " << endl;
     cout << endl;
     cout << "==================================================================" << endl;
     cout << endl;
-    cout << "#################Welcome to ATM Sederhana########################" << endl;
+    cout << "#####################  Welcome to ATM Amikom   ###################" << endl;
     cout << endl;
-    cout << "Kelompok YTTA" << endl;
+    cout << "                          Kelompok YTTA                           " << endl;
     cout << endl;
-    cout << "PIN Anda 123456" << endl;
+    cout << "                         PIN Anda 123456                          " << endl;
     cout << endl;
-    cout << "#################@Amikom/Prodi_Sistem_Informasi/2024##############" << endl;
+    cout << "################ @Amikom/Prodi_Sistem_Informasi/2024 #############" << endl;
     cout << endl;
 }
 
@@ -129,19 +151,21 @@ void penarikan_uang() {
     int pilih2;
     int penarikan[6] = {50000, 100000, 200000, 1500000, 300000, 2000000};
 
-    cout << "===================================" << endl;
+    cout << "==================================================================" << endl;
     cout << endl;
-    cout << "-- PT BANK AMIKOM --" << endl;
+    cout << "                         -- PT BANK AMIKOM --                     " << endl;
     cout << endl;
-    cout << "PILIH JUMLAH PAKET TUNAI PENARIKAN" << endl;
+    cout << "==================================================================" << endl;
     cout << endl;
-    cout << "1. Rp50.000\t      2. Rp100.000" << endl;
+    cout << "---------------- PILIH JUMLAH PAKET TUNAI PENARIKAN --------------" << endl;
     cout << endl;
-    cout << "3. Rp200.000\t      4. Rp1.500.000" << endl;
+    cout << "\t\t1. Rp50.000\t      2. Rp100.000" << endl;
     cout << endl;
-    cout << "5. Rp300.000\t      6. Rp2.000.000" << endl;
+    cout << "\t\t3. Rp200.000\t      4. Rp1.500.000" << endl;
     cout << endl;
-    cout << "===================================" << endl;
+    cout << "\t\t5. Rp300.000\t      6. Rp2.000.000" << endl;
+    cout << endl;
+    cout << "==================================================================" << endl;
     cout << endl;
     cout << "Masukan Pilihan : "; cin >> pilih2;
     system("cls");
@@ -177,13 +201,13 @@ int main() {
         if (pin == 123456) {
         	cout << endl;
             cout << endl;
-            cout << "======================================================" << endl;
-            cout << "PILIH MENU DI BAWAH INI" << endl;
-            cout << "---------------------------------------------------------------------------------------------" << endl;
+            cout << "==================================================================" << endl;
+            cout << "                       PILIH MENU DI BAWAH INI                    " << endl;
+            cout << "------------------------------------------------------------------" << endl;
             cout << "1.) <---  Transfer Uang \t\t Info Data \t---> 4.)" << endl;
             cout << "2.) <---  Menabung \t\t\t Info Saldo \t---> 5.)" << endl;
             cout << "3.) <---  Penarikan \t\t\t Keluar \t---> 6.)" << endl;
-            cout << "---------------------------------------------------------------------------------------------" << endl;
+            cout << "------------------------------------------------------------------" << endl;
             cout << endl;
             cout << "Masukan Pilihan = "; cin >> pilihan;
 
@@ -221,13 +245,14 @@ int main() {
             system("cls");
             cout << endl;
             cout << endl;
-            cout << "===========================WARNING=========================" << endl;
-            cout << "\tMAAF PIN YANG ANDA MASUKAN SALAH" << endl;
-            cout << "\tSILAHKAN ULANGI DAN PERIKSA PIN ANDA" << endl;
-            cout << "\tTERIMAKASIH" << endl;
-            cout << "==========================================================" << endl;
+            
+            cout << "============================= WARNING ============================" << endl;
+            cout << "\t\t  MAAF PIN YANG ANDA MASUKAN SALAH" << endl;
+            cout << "\t\tSILAHKAN ULANGI DAN PERIKSA PIN ANDA" << endl;
+            cout << "\t\t           TERIMAKASIH" << endl;
+            cout << "==================================================================" << endl;
             cout << endl;
-            cout << "\t\tProgram Selesai ............." << endl;
+            cout << "\t\t\tProgram Selesai ............." << endl;
             cout << endl;
             return 0;
         }
