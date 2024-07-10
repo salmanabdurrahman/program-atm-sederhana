@@ -2,6 +2,7 @@
 #include <windows.h> // Include library Windows.h untuk menggunakan API Windows
 #include <string>
 #include <stdlib.h>
+#include <iomanip>
 using namespace std;
 
 // Variabel global
@@ -20,7 +21,7 @@ void tf() {
     string nama, jenis, ket;
     int norek, transfer;
     cout << endl;
-    setColor(10); // Hijau
+    setColor(11); // Hijau Terang
     cout << "==================================================================" << endl;
     cout << endl;
     cout << "                          -- PT BANK AMIKOM --                    " << endl;
@@ -58,7 +59,7 @@ void tf() {
 void nabung() {
     int uang;
     cout << "==================================================================" << endl;
-    setColor(10); // Hijau
+    setColor(11); // Hijau Terang
     cout << endl;
     cout << "                          -- PT BANK AMIKOM --                    " << endl;
     cout << endl;
@@ -87,7 +88,7 @@ void nabung() {
 // Prosedur tampil informasi kelompok
 void tampil() {
     cout << endl;
-    setColor(10); // Hijau
+    setColor(11); // Hijau Terang
     cout << "==================================================================" << endl;
     cout << endl;
     cout << "                           -- PT BANK AMIKOM --                   " << endl;
@@ -115,7 +116,7 @@ void tampil() {
 // Prosedur untuk menampilkan saldo
 void saldo() {
     cout << endl;
-    setColor(10); // Hijau
+    setColor(11); // Hijau Terang
     cout << "==================================================================" << endl;
     cout << endl;
     cout << "                         -- PT BANK AMIKOM --                     " << endl;
@@ -132,10 +133,9 @@ void saldo() {
     system("cls");
 }
 
-
 // Prosedur untuk keluar
 void exit_program() {
-    setColor(10); // Hijau
+    setColor(11); // Hijau Terang
     cout << "==================================================================" << endl;
     cout << "    Terima Kasih Telah Menggunakan Mesin ATM Sederhana Kami...    " << endl;
     cout << "==================================================================" << endl;
@@ -143,7 +143,7 @@ void exit_program() {
 
 // Prosedur untuk menampilkan judul
 void judul() {
-    setColor(10); // Hijau
+    setColor(11); // Hijau Terang
     cout << "==================================================================" << endl;
     cout << endl;
     cout << "              FINAL PROJECT PEMROGRAMAN TERSTRUKTUR               " << endl;
@@ -167,7 +167,7 @@ void penarikan_uang() {
     int penarikan[6] = {50000, 100000, 200000, 1500000, 300000, 2000000};
 
     cout << "==================================================================" << endl;
-    setColor(10); // Hijau
+    setColor(11); // Hijau Terang
     cout << endl;
     cout << "                         -- PT BANK AMIKOM --                     " << endl;
     cout << endl;
@@ -200,14 +200,14 @@ void penarikan_uang() {
             cout << endl;
             setColor(12); // Merah
             cout << "\t\tMaaf Saldo Anda Tidak Mencukupi" << endl;
-            setColor(10); // Kembali ke warna hijau
+            setColor(11); // Kembali ke warna hijau terang
         }
     } else {
         cout << endl;
         cout << endl;
         setColor(12); // Merah
         cout << "\t\tMaaf Pilihan Anda Tidak Tersedia" << endl;
-        setColor(10); // Kembali ke warna hijau
+        setColor(11); // Kembali ke warna hijau terang
     }
 
     cout << endl;
@@ -225,9 +225,9 @@ int main() {
 
     while (true) {
         if (pin == 123456) {
-        	cout << endl;
             cout << endl;
-            setColor(10); // Hijau
+            cout << endl;
+            setColor(11); // Hijau Terang
             cout << "==================================================================" << endl;
             cout << "                       PILIH MENU DI BAWAH INI                    " << endl;
             cout << "------------------------------------------------------------------" << endl;
@@ -267,7 +267,7 @@ int main() {
                     system("cls");
                     setColor(12); // Merah
                     cout << "Pilihan salah ...... !!" << endl;
-                    setColor(10); // Kembali ke warna hijau
+                    setColor(11); // Kembali ke warna hijau terang
                     break;
             }
         } else {
@@ -282,7 +282,7 @@ int main() {
             cout << "==================================================================" << endl;
             cout << endl;
             cout << "\t\t\tProgram Selesai ............." << endl;
-            setColor(10); // Kembali ke warna hijau
+            setColor(11); // Kembali ke warna hijau terang
             cout << endl;
             return 0;
         }
