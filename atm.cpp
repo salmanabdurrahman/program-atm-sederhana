@@ -21,14 +21,14 @@ void tf() {
     string nama, jenis, ket;
     int norek, transfer;
     cout << endl;
-    setColor(11); // Hijau Terang
+    setColor(10); // Hijau
     cout << "==================================================================" << endl;
     cout << endl;
     cout << "                          -- PT BANK AMIKOM --                    " << endl;
     cout << endl;
     cout << "==================================================================" << endl;
     cout << endl;
-    cout << "=--------------------------- TRANSFER UANG -----------------------" << endl;
+    cout << "---------------------------- TRANSFER UANG -----------------------" << endl;
     cout << endl;
     cout << "Masukkan Nama Pemilik Rekening        : "; cin >> nama;
     cout << "Masukkan Jenis ATM Bank               : "; cin >> jenis;
@@ -36,19 +36,27 @@ void tf() {
     cout << "Masukkan Jumlah Transfer Uang         : Rp. "; cin >> transfer;
     cout << "Keterangan Pembayaran                 : "; cin.ignore(); getline(cin, ket);  
     cout << endl;
-    *ptr_jumlah -= transfer; // Menggunakan pointer untuk mengurangi saldo
 
-    cout << "------------------------------------------------------------------" << endl;
-    cout << "======================= Preview Pembayaran Anda ==================" << endl;
-    cout << endl;
-    cout << "Nama                              : " << nama << endl;
-    cout << "Jenis ATM Bank                    : " << jenis << endl;
-    cout << "No. Rekening Tujuan               : " << norek << endl;
-    cout << "Jumlah Transfer                   : Rp. " << transfer << endl;
-    cout << "Keterangan                        : " << ket << endl;
-    cout << "------------------------------------------------------------------" << endl;
-    cout << "Terimakasih! Transaksi anda sedang diproses...." << endl;
-    cout << "Sisa saldo anda : Rp. " << *ptr_jumlah << endl;
+    // Percabangan if-else untuk mengecek apakah saldo mencukupi untuk transfer
+    if (*ptr_jumlah >= transfer) {
+        *ptr_jumlah -= transfer; // Menggunakan pointer untuk mengurangi saldo
+        cout << "------------------------------------------------------------------" << endl;
+        cout << "======================= Preview Pembayaran Anda ==================" << endl;
+        cout << endl;
+        cout << "Nama                              : " << nama << endl;
+        cout << "Jenis ATM Bank                    : " << jenis << endl;
+        cout << "No. Rekening Tujuan               : " << norek << endl;
+        cout << "Jumlah Transfer                   : Rp. " << transfer << endl;
+        cout << "Keterangan                        : " << ket << endl;
+        cout << "------------------------------------------------------------------" << endl;
+        cout << "Terimakasih! Transaksi anda sedang diproses...." << endl;
+        cout << "Sisa saldo anda : Rp. " << *ptr_jumlah << endl;
+    } else {
+        setColor(12); // Merah
+        cout << "Maaf, saldo Anda tidak mencukupi untuk melakukan transfer." << endl;
+        setColor(10); // Kembali ke warna hijau
+    }
+
     cout << endl;
     int cod;
     cout << "Masukkan kode Angka Bebas Untuk Kembali Ke Home = "; cin >> cod;
@@ -59,7 +67,7 @@ void tf() {
 void nabung() {
     int uang;
     cout << "==================================================================" << endl;
-    setColor(11); // Hijau Terang
+    setColor(10); // Hijau
     cout << endl;
     cout << "                          -- PT BANK AMIKOM --                    " << endl;
     cout << endl;
@@ -72,7 +80,7 @@ void nabung() {
     cout << endl;
     cout << "Masukan Jumlah Uang RP. "; cin >> uang;
 
-    // Menambahkan ke saldo
+    // Menambahkan ke saldo menggunakan pointer
     *ptr_jumlah += uang;
 
     cout << endl;
@@ -88,7 +96,7 @@ void nabung() {
 // Prosedur tampil informasi kelompok
 void tampil() {
     cout << endl;
-    setColor(11); // Hijau Terang
+    setColor(10); // Hijau
     cout << "==================================================================" << endl;
     cout << endl;
     cout << "                           -- PT BANK AMIKOM --                   " << endl;
@@ -116,7 +124,7 @@ void tampil() {
 // Prosedur untuk menampilkan saldo
 void saldo() {
     cout << endl;
-    setColor(11); // Hijau Terang
+    setColor(10); // Hijau
     cout << "==================================================================" << endl;
     cout << endl;
     cout << "                         -- PT BANK AMIKOM --                     " << endl;
@@ -135,7 +143,7 @@ void saldo() {
 
 // Prosedur untuk keluar
 void exit_program() {
-    setColor(11); // Hijau Terang
+    setColor(10); // Hijau
     cout << "==================================================================" << endl;
     cout << "    Terima Kasih Telah Menggunakan Mesin ATM Sederhana Kami...    " << endl;
     cout << "==================================================================" << endl;
@@ -143,7 +151,7 @@ void exit_program() {
 
 // Prosedur untuk menampilkan judul
 void judul() {
-    setColor(11); // Hijau Terang
+    setColor(10); // Hijau
     cout << "==================================================================" << endl;
     cout << endl;
     cout << "              FINAL PROJECT PEMROGRAMAN TERSTRUKTUR               " << endl;
@@ -164,10 +172,11 @@ void judul() {
 
 void penarikan_uang() {
     int pilih2;
+    // Deklarasi array untuk pilihan jumlah penarikan
     int penarikan[6] = {50000, 100000, 200000, 1500000, 300000, 2000000};
 
     cout << "==================================================================" << endl;
-    setColor(11); // Hijau Terang
+    setColor(10); // Hijau
     cout << endl;
     cout << "                         -- PT BANK AMIKOM --                     " << endl;
     cout << endl;
@@ -186,6 +195,7 @@ void penarikan_uang() {
     cout << "Masukan Pilihan : "; cin >> pilih2;
     system("cls");
 
+    // Percabangan if-else untuk memeriksa pilihan dan saldo
     if (pilih2 >= 1 && pilih2 <= 6) {
         if (*ptr_jumlah >= penarikan[pilih2 - 1]) {
             *ptr_jumlah -= penarikan[pilih2 - 1];
@@ -200,14 +210,14 @@ void penarikan_uang() {
             cout << endl;
             setColor(12); // Merah
             cout << "\t\tMaaf Saldo Anda Tidak Mencukupi" << endl;
-            setColor(11); // Kembali ke warna hijau terang
+            setColor(10); // Kembali ke warna hijau
         }
     } else {
         cout << endl;
         cout << endl;
         setColor(12); // Merah
         cout << "\t\tMaaf Pilihan Anda Tidak Tersedia" << endl;
-        setColor(11); // Kembali ke warna hijau terang
+        setColor(10); // Kembali ke warna hijau
     }
 
     cout << endl;
@@ -223,11 +233,12 @@ int main() {
     judul();
     cout << "Masukan PIN anda : "; cin >> pin;
 
+    // Perulangan while untuk mengulang menu utama selama PIN benar
     while (true) {
         if (pin == 123456) {
             cout << endl;
             cout << endl;
-            setColor(11); // Hijau Terang
+            setColor(10); // Hijau
             cout << "==================================================================" << endl;
             cout << "                       PILIH MENU DI BAWAH INI                    " << endl;
             cout << "------------------------------------------------------------------" << endl;
@@ -238,6 +249,7 @@ int main() {
             cout << endl;
             cout << "Masukan Pilihan = "; cin >> pilihan;
 
+            // Percabangan switch-case untuk menangani pilihan menu
             switch (pilihan) {
                 case 1:
                     system("cls");
@@ -267,7 +279,7 @@ int main() {
                     system("cls");
                     setColor(12); // Merah
                     cout << "Pilihan salah ...... !!" << endl;
-                    setColor(11); // Kembali ke warna hijau terang
+                    setColor(10); // Kembali ke warna hijau
                     break;
             }
         } else {
@@ -282,10 +294,9 @@ int main() {
             cout << "==================================================================" << endl;
             cout << endl;
             cout << "\t\t\tProgram Selesai ............." << endl;
-            setColor(11); // Kembali ke warna hijau terang
+            setColor(10); // Kembali ke warna hijau
             cout << endl;
             return 0;
         }
     }
 }
-
